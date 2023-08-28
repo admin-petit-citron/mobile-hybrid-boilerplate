@@ -24,7 +24,7 @@ This is an opiniated starter boilerplate for building cross-platform mobile appl
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/vuejs-ionic-typescript-boilerplate.git
+    git clone https://github.com/admin-petit-citron/mobile-hybrid-boilerplate.git
     ```
 
 2. Navigate into the project directory:
@@ -67,7 +67,7 @@ npm run lint
 
 ### Building for Staging
 
-To build your app for production, run:
+To build your app for staging, run:
 
 ```bash
 npm run build:staging
@@ -123,13 +123,9 @@ npm run build
 5. Run tests to make sure your changes do not break existing functionality.
 6. Commit your changes and open a pull request.
 
-## License
-
-MIT License
-
 ## Support
 
-For questions or support, please email [support@example.com](mailto:support@example.com) or open an issue.
+Open an issue :).
 
 ## Acknowledgments
 
