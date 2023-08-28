@@ -1,4 +1,4 @@
-# VueJS-Ionic-TypeScript-Boilerplate
+# VueJS Ionic TypeScript Boilerplate
 
 This is an opiniated starter boilerplate for building cross-platform mobile applications using Vue.js, Ionic, TypeScript, ESLint, and Cypress for testing. It provides a solid foundation for modern web and mobile application development.
 
@@ -30,7 +30,7 @@ This is an opiniated starter boilerplate for building cross-platform mobile appl
 2. Navigate into the project directory:
 
     ```bash
-    cd vuejs-ionic-typescript-boilerplate
+    cd mobile-hybrid-boilerplate
     ```
 
 3. Install the dependencies:
