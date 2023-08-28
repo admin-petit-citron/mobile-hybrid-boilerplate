@@ -1,0 +1,7 @@
+{
+  "name": "Little Lemon",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
