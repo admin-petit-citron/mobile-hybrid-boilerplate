@@ -1,0 +1,30 @@
+/**
+ * Extending Ionic Fonts with Custom Fonts
+ *
+ * Ionic uses the --ion-font-family CSS variable to set the global font family for the app.
+ * To extend or replace Ionic's default fonts, you can override this variable.
+ *
+ * Steps:
+ *
+ * 1. Import Your Custom Font: Use the @font-face rule to import your custom font.
+ *
+ *    @font-face {
+ *      font-family: 'YourCustomFontName';
+ *      src: url('../../fonts/YourCustomFontName-Regular.ttf') format('truetype');
+ *      font-weight: normal;
+ *      font-style: normal;
+ *    }
+ *
+ * 2. Override --ion-font-family: You can then override the --ion-font-family variable to include your custom font.
+ *
+ *    :root {
+ *      --ion-font-family: 'YourCustomFontName', 'Roboto', 'Helvetica Neue', sans-serif;
+ *    }
+ *
+ * Here, 'YourCustomFontName' is the custom font you imported. If it fails to load,
+ * the app will fall back to 'Roboto', 'Helvetica Neue', and then to a generic sans-serif font.
+ *
+ * Note: Make sure the path to your custom font file is correct.
+ *
+ * For additional details, please refer to the README found in public/assets/fonts.
+ */
