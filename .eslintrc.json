@@ -1,0 +1,166 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["src/**/*.{js,jsx,ts,tsx,vue}", "*.config.ts"],
+      "extends": [
+        "plugin:import/typescript",
+        "plugin:vue/vue3-strongly-recommended",
+        "@vue/eslint-config-typescript",
+        "@vue/eslint-config-airbnb",
+        "@vue/typescript/recommended"
+      ],
+      "parserOptions": {
+        "ecmaVersion": "latest",
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
+      },
+      "plugins": [ "vue", "@typescript-eslint", "import" ],
+      "settings": {
+        "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "import/resolver": {
+          "typescript": {
+            "alwaysTryTypes": true,
+            "project": "./tsconfig.json"
+          }
+        }
+      },
+      "rules": {
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+       ],
+        "no-console": "off",
+
+        "indent": "off",
+        "@typescript-eslint/indent": ["error", 2],
+
+        "quotes": "off",
+        "@typescript-eslint/quotes": ["error", "single"],
+
+        "comma-dangle": "off",
+        "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+
+        "semi": "off",
+        "@typescript-eslint/semi": ["error", "always"],
+
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error", {
+          "varsIgnorePattern": "^_",
+          "argsIgnorePattern": "^_"
+        }],
+
+        "object-curly-newline": ["error", {
+          "ObjectPattern": { "minProperties": 5, "consistent": true },
+          "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+        }],
+
+        "max-lines-per-function": ["warn", {
+          "max": 50,
+          "skipBlankLines": true,
+          "skipComments": true
+        }],
+
+        "complexity": ["warn", 20],
+
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error"],
+
+        "no-trailing-spaces": "error",
+        "no-multiple-empty-lines": ["error", { "max": 2 }],
+        "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+
+
+        "vuejs-accessibility/no-autofocus": "off",
+        "vuejs-accessibility/click-events-have-key-events": "off",
+        "vue/component-name-in-template-casing": ["error", "kebab-case", {
+          "registeredComponentsOnly": true,
+          "ignores": []
+        }],
+        "vue/no-deprecated-slot-attribute": "off",
+        "vue/require-explicit-emits": ["error"],
+        "vue/attributes-order": ["error", {
+          "order": [
+            "DEFINITION",
+            "LIST_RENDERING",
+            "CONDITIONALS",
+            "RENDER_MODIFIERS",
+            "GLOBAL",
+            ["UNIQUE", "SLOT"],
+            "TWO_WAY_BINDING",
+            "OTHER_DIRECTIVES",
+            "OTHER_ATTR",
+            "EVENTS",
+            "CONTENT"
+          ],
+          "alphabetical": false
+        }],
+        "vue/order-in-components": ["error", {
+          "order": [
+            "el",
+            "name",
+            "key",
+            "parent",
+            "functional",
+            ["delimiters", "comments"],
+            ["components", "directives", "filters"],
+            "extends",
+            "mixins",
+            ["provide", "inject"],
+            "ROUTER_GUARDS",
+            "layout",
+            "middleware",
+            "validate",
+            "scrollToTop",
+            "transition",
+            "loading",
+            "inheritAttrs",
+            "model",
+            ["props", "propsData"],
+            "emits",
+            "setup",
+            "asyncData",
+            "data",
+            "fetch",
+            "head",
+            "computed",
+            "watch",
+            "watchQuery",
+            "LIFECYCLE_HOOKS",
+            "methods",
+            ["template", "render"],
+            "renderError"
+          ]
+        }]
+      }
+    },
+    {
+      "files": ["tests/e2e/**/*.{js,jsx,ts,tsx}"],
+      "extends": [
+        "plugin:import/typescript",
+        "plugin:cypress/recommended",
+        "eslint-config-airbnb-base"
+      ],
+      "parserOptions": {
+        "sourceType": "module"
+      },
+      "plugins": [ "cypress", "@typescript-eslint" ],
+      "env": {
+        "cypress/globals": true
+      }
+    }
+  ]
+}
